@@ -66,9 +66,10 @@ export const metadata: Metadata = {
       "Born To Create Beyond Limits. Creative Media & Technology Studio based in Noida, Uttar Pradesh, India.",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "BRAHMORA MOTIONS — Creative Media & Technology Studio",
       },
     ],
@@ -78,16 +79,20 @@ export const metadata: Metadata = {
     title: "BRAHMORA MOTIONS | Creative Media & Technology Studio",
     description:
       "Born To Create Beyond Limits. Creative Media & Technology Studio based in Noida, Uttar Pradesh, India.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
     creator: "@brahmoramotion",
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/logo-icon.svg", sizes: "192x192", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/favicon.svg",
-    apple: "/logo-icon.svg",
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   manifest: "/site.webmanifest",
   robots: {
