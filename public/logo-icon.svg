@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="28" fill="#171717"/>
+  <!-- Dynamic Brahmora 'B' and 'M' Motion Geometric Wings -->
+  <path d="M28 32H62C73.0457 32 82 40.9543 82 52C82 58.2 79.2 63.8 74.8 67.4C80.8 71.4 84 78 84 85C84 96.0457 75.0457 105 64 105H28V32Z" stroke="#FFD400" stroke-width="4" stroke-opacity="0.15" fill="none"/>
+  
+  <!-- Modern Geometric B & M Studio Mark -->
+  <path d="M34 28L68 28C76.8366 28 84 35.1634 84 44C84 49.5 81.2 54.3 77 57.2C83 60.5 87 67 87 74.5C87 84.7173 78.7173 93 68.5 93L34 93V28Z" fill="#171717"/>
+  
+  <!-- Outer Motion Hex Wing (Yellow) -->
+  <path d="M32 30H66C74.8366 30 82 37.1634 82 46C82 51.5 79.2 56.3 75 59C81 62 85 68.5 85 76C85 86.4934 76.4934 95 66 95H32V30Z" stroke="#FFD400" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Dynamic Motion Prisms -->
+  <polygon points="44,42 64,42 70,50 50,50" fill="#FFD400"/>
+  <polygon points="44,56 70,56 76,66 50,66" fill="#FFFFFF"/>
+  <polygon points="44,72 64,72 70,82 50,82" fill="#FFD400"/>
+  
+  <!-- Accent Precision Dots -->
+  <circle cx="88" cy="34" r="4" fill="#FFD400"/>
+  <circle cx="94" cy="46" r="2.5" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" fill="none">
+  <!-- Brand Mark Group -->
+  <g transform="translate(6, 9)">
+    <!-- Charcoal rounded container -->
+    <rect width="72" height="72" rx="18" fill="#171717"/>
+    <!-- Yellow Motion Geometry -->
+    <path d="M22 18H42C48 18 52 22 52 27C52 30.5 50.5 33.5 48 35C51.5 36.8 54 41 54 46C54 52.5 49 57 42 57H22V18Z" stroke="#FFD400" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Dynamic Prisms -->
+    <polygon points="28,25 40,25 44,30 32,30" fill="#FFD400"/>
+    <polygon points="28,34 44,34 47,40 31,40" fill="#FFFFFF"/>
+    <polygon points="28,45 40,45 44,50 32,50" fill="#FFD400"/>
+    <circle cx="56" cy="22" r="2.5" fill="#FFD400"/>
+  </g>
+  
+  <!-- Brand Typography -->
+  <g transform="translate(94, 20)">
+    <!-- Primary Name: BRAHMORA -->
+    <text x="0" y="30" font-family="'Syne', 'Inter', system-ui, -apple-system, sans-serif" font-size="28" font-weight="900" letter-spacing="0.08em" fill="#171717">BRAHMORA</text>
+    <!-- Accent Dot / Motion Spark -->
+    <circle cx="178" cy="22" r="4.5" fill="#FFD400"/>
+    <!-- Second Part: MOTIONS -->
+    <text x="190" y="30" font-family="'Syne', 'Inter', system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" letter-spacing="0.18em" fill="#171717">MOTIONS</text>
+    <!-- Subtitle Category Tag -->
+    <text x="1" y="48" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.28em" fill="#707070">CREATIVE MEDIA &amp; TECHNOLOGY STUDIO</text>
+    <!-- Yellow Horizon Accent Line -->
+    <rect x="290" y="44" width="24" height="2" rx="1" fill="#FFD400"/>
+  </g>
+</svg>
