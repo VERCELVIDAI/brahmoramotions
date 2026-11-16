@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Play, Sparkles, Trophy } from "lucide-react";
 import { Hero3DFallback } from "./Hero3DFallback";
 import { soundFx } from "@/lib/sound";
 
@@ -17,110 +17,168 @@ const Hero3DCanvas = dynamic(
 export function Hero() {
   const scrollToNext = () => {
     soundFx.playClick();
-    const introEl = document.getElementById("intro");
+    const introEl = document.getElementById("our-dna");
     introEl?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section
-      id="home"
-      className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white"
-    >
-      {/* Background Subtle Gradient & Grid */}
-      <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[750px] h-[380px] bg-brand-yellow/12 blur-[130px] rounded-full pointer-events-none" />
+    <div className="relative bg-[#080C16] text-white overflow-hidden pt-28 sm:pt-36 lg:pt-40">
+      {/* 1. Cinematic Background & Studio Ambient Lighting */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,212,0,0.18),rgba(255,255,255,0))]" />
+      <div className="absolute top-1/4 right-10 w-[550px] h-[550px] bg-amber-400/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[450px] h-[450px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Cybernetic Grid Overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
+          backgroundSize: "48px 48px",
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-16 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Typography & CTAs (7 cols) */}
+          {/* Left Column (7 cols): Editorial Typography & Action Matrix */}
           <div className="lg:col-span-7 space-y-8 text-left">
-            {/* Eyebrow Pill with Live Telemetry Dot */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-lightGrey border border-brand-border text-brand-charcoal text-xs font-mono font-bold tracking-widest uppercase shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-brand-yellow animate-ping" />
-              <span>CREATIVE MEDIA &amp; TECHNOLOGY STUDIO</span>
+            {/* Global Award & Trust Pill Badge (BMDU Inspired) */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.08] backdrop-blur-md border border-white/15 text-xs font-semibold tracking-wide text-neutral-200 shadow-lg">
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-amber-400/20 text-amber-300">
+                <Trophy className="w-3 h-3 text-amber-300" />
+              </span>
+              <span className="font-mono text-[11px] uppercase tracking-wider text-amber-400 font-bold">
+                GLOBAL CREATIVE MEDIA &amp; TECHNOLOGY STUDIO
+              </span>
+              <span className="text-white/30">•</span>
+              <span className="text-neutral-300 text-[11px]">Noida, India</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-display tracking-tight text-brand-charcoal leading-[1.05]">
-              WE TURN{" "}
-              <span className="yellow-pill-highlight text-brand-charcoal">
-                IDEAS INTO
-              </span>{" "}
-              <br className="hidden sm:inline" />
-              <span className="relative inline-block">
-                DIGITAL IMPACT.
-                <span className="absolute left-0 -bottom-1.5 w-full h-[4px] bg-brand-yellow rounded-full" />
+            {/* Main Commanding Headline */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-black font-display tracking-tight leading-[1.06] text-white">
+              Engineering Digital Growth Through{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">
+                Motion, Code &amp; Innovation
               </span>
             </h1>
 
-            {/* Supporting Description */}
-            <p className="text-base sm:text-lg text-brand-secondaryText leading-relaxed max-w-2xl font-normal">
-              From powerful brand identities and high-impact advertisements to
-              modern websites and intelligent SaaS platforms, we turn ambitious
-              ideas into meaningful digital experiences.
+            {/* Sub-Copy: High Authority Narrative */}
+            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl font-normal">
+              At <strong className="text-white font-semibold">BRAHMORA MOTIONS</strong>, we combine cinematic 3D motion design and generative AI video production with cutting-edge web development and scalable SaaS platforms — helping ambitious businesses scale faster, captivate audiences, and outperform their competition in every market.
             </p>
 
-            {/* Primary & Secondary CTAs */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <Link
                 href="/contact"
                 onClick={() => soundFx.playClick()}
                 onMouseEnter={() => soundFx.playHover()}
-                className="group px-8 py-4 rounded-full bg-brand-yellow text-brand-charcoal font-bold text-xs uppercase tracking-wider transition-all duration-200 hover:bg-brand-yellowHover hover:shadow-glow active:scale-95 flex items-center justify-center gap-2.5 shadow-soft"
+                className="group px-8 py-4 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 text-brand-charcoal font-black text-xs uppercase tracking-wider transition-all duration-200 hover:shadow-[0_0_35px_rgba(255,212,0,0.55)] active:scale-95 flex items-center justify-center gap-2.5 shadow-xl"
               >
-                <span>START A PROJECT</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                <span>CONSULT OUR STRATEGY</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
               <Link
                 href="/work"
                 onClick={() => soundFx.playClick()}
                 onMouseEnter={() => soundFx.playHover()}
-                className="px-8 py-4 rounded-full bg-brand-lightGrey text-brand-charcoal font-bold text-xs uppercase tracking-wider transition-all duration-200 hover:bg-white hover:border-brand-charcoal border border-brand-border active:scale-95 flex items-center justify-center gap-2"
+                className="px-8 py-4 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 border border-white/20 active:scale-95 flex items-center justify-center gap-2.5 backdrop-blur-md"
               >
+                <Play className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                 <span>EXPLORE OUR WORK</span>
-                <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
 
-            {/* Studio Metadata Badges */}
-            <div className="pt-6 border-t border-brand-borderLight grid grid-cols-2 sm:grid-cols-3 gap-3">
-              <div className="flex items-center gap-2 text-xs font-semibold text-brand-charcoal">
-                <CheckCircle2 className="w-4 h-4 text-brand-yellow shrink-0" />
-                <span>Noida Studio</span>
+            {/* Live Metrics / Stats Row (BMDU Architecture) */}
+            <div className="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-8">
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-white">
+                  500<span className="text-amber-400">+</span>
+                </div>
+                <div className="text-[11px] sm:text-xs text-neutral-400 font-medium uppercase tracking-wider mt-1">
+                  Products &amp; Films Shipped
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-brand-charcoal">
-                <CheckCircle2 className="w-4 h-4 text-brand-yellow shrink-0" />
-                <span>End-to-End Delivery</span>
+
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-white">
+                  10M<span className="text-amber-400">+</span>
+                </div>
+                <div className="text-[11px] sm:text-xs text-neutral-400 font-medium uppercase tracking-wider mt-1">
+                  Audience Impressions
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-brand-charcoal">
-                <CheckCircle2 className="w-4 h-4 text-brand-yellow shrink-0" />
-                <span>Next-Gen Stack</span>
+
+              <div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black font-display text-white">
+                  99.8<span className="text-amber-400">%</span>
+                </div>
+                <div className="text-[11px] sm:text-xs text-neutral-400 font-medium uppercase tracking-wider mt-1">
+                  Client Satisfaction Score
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Interactive 3D Atrium Composition (5 cols) */}
-          <div className="lg:col-span-5 relative">
-            <Hero3DCanvas />
-          </div>
-        </div>
+          {/* Right Column: Interactive 3D WebGL Canvas Composition (5 cols) */}
+          <div className="lg:col-span-5 relative flex justify-center items-center">
+            <div className="relative w-full max-w-[500px]">
+              {/* Floating ambient badge */}
+              <div className="absolute -top-4 -right-4 z-20 px-3.5 py-1.5 rounded-full bg-[#171717]/90 border border-amber-400/40 text-amber-400 text-[10px] font-mono font-bold tracking-widest uppercase shadow-2xl backdrop-blur-md flex items-center gap-1.5">
+                <Sparkles className="w-3 h-3 text-amber-400 animate-pulse" />
+                <span>REAL-TIME 3D ATRIUM</span>
+              </div>
 
-        {/* Subtle Scroll Indicator */}
-        <div className="mt-16 sm:mt-24 flex justify-center">
-          <button
-            onClick={scrollToNext}
-            onMouseEnter={() => soundFx.playHover()}
-            className="group flex flex-col items-center gap-2 text-xs font-mono font-bold tracking-widest uppercase text-brand-secondaryText hover:text-brand-charcoal transition-colors focus:outline-none"
-            aria-label="Scroll down to Introduction"
-          >
-            <span>SCROLL TO DISCOVER</span>
-            <div className="w-6 h-10 rounded-full border-2 border-brand-charcoal/20 flex items-start justify-center p-1.5 group-hover:border-brand-charcoal transition-colors">
-              <div className="w-1.5 h-2.5 rounded-full bg-brand-yellow animate-bounce" />
+              <Hero3DCanvas />
             </div>
-          </button>
+          </div>
         </div>
       </div>
-    </section>
+
+      {/* 2. RUNNING CONTINUOUS MARQUEE TICKER (BMDU Blueprint) */}
+      <div className="relative w-full bg-[#0062FF] text-white py-3.5 overflow-hidden border-y border-blue-400/30 flex items-center shadow-lg">
+        <div className="flex w-max animate-marquee space-x-8 items-center whitespace-nowrap text-xs font-bold uppercase tracking-widest">
+          <span>Trusted By 250+ Global Brands &amp; Fast-Growing Startups</span>
+          <span className="text-amber-300">★</span>
+          <span>Noida, Uttar Pradesh, India Headquarters</span>
+          <span className="text-amber-300">★</span>
+          <span>Cinematic 3D Video Production &amp; Commercials</span>
+          <span className="text-amber-300">★</span>
+          <span>High-Performance Next.js Web Development</span>
+          <span className="text-amber-300">★</span>
+          <span>Scalable SaaS &amp; Cloud Architecture</span>
+          <span className="text-amber-300">★</span>
+          <span>AI Lead Automation &amp; Intelligent Voice Agents</span>
+          <span className="text-amber-300">★</span>
+          <span>Born To Create Beyond Limits</span>
+          <span className="text-amber-300">★</span>
+          <span>Trusted By 250+ Global Brands &amp; Fast-Growing Startups</span>
+          <span className="text-amber-300">★</span>
+          <span>Noida, Uttar Pradesh, India Headquarters</span>
+          <span className="text-amber-300">★</span>
+          <span>Cinematic 3D Video Production &amp; Commercials</span>
+          <span className="text-amber-300">★</span>
+          <span>High-Performance Next.js Web Development</span>
+          <span className="text-amber-300">★</span>
+          <span>Scalable SaaS &amp; Cloud Architecture</span>
+          <span className="text-amber-300">★</span>
+          <span>AI Lead Automation &amp; Intelligent Voice Agents</span>
+          <span className="text-amber-300">★</span>
+          <span>Born To Create Beyond Limits</span>
+        </div>
+
+        {/* Pinned Action Button Right */}
+        <div className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20">
+          <Link
+            href="/contact"
+            onClick={() => soundFx.playClick()}
+            className="px-4 py-1.5 rounded-full bg-white text-[#0062FF] hover:bg-neutral-100 text-[11px] font-black uppercase tracking-wider transition-all duration-150 shadow-md flex items-center gap-1.5"
+          >
+            <span>Book Consultation</span>
+            <ArrowRight className="w-3 h-3" />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
